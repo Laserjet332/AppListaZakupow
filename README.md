@@ -7,15 +7,15 @@ Prosta aplikacja slużąca do tworzenia i zapisywania listy zakupów.
 
 ## Funkcjonalności
 + Możliwość stworzenia listy zakupów o podanej nazwie oraz dodanie pozycji do niej.
-+ Program może przechowywać wiele list zakupów.
 + Usuwanie oraz edytowanie istniejącej listy.
-+ Wyszukiwanie listy po jej nazwie.
-+ Wyświetlanie aktualnych list po dacie (domyślnie) i nazwie.
++ Wyszukiwanie listy po jej nazwie oraz wyświetlanie jej.
++ Zaznaczanie kupionych przedmiotów.
 + Zapisywanie listy do pliku pod zadaną ścieżke.
++ Program może przechowywać wiele list zakupów.
 ## Użyte programy
 Nasza aplikacja została utworzona przy pomocy programu [Python 3.9](https://www.python.org/downloads/release/python-390/).
 ## Instalacja
-Naszą aplikacje można uruchomić na każdym komputerze; należy jedynie posiadać wersję 3.9 lub nowszą Pythona...
+Naszą aplikacje można uruchomić na każdym komputerze, należy jedynie posiadać wersję 3.9 lub nowszą Pythona...
 ## Zespół
 <table>
 <tr>
