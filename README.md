@@ -13,10 +13,64 @@ Prosta aplikacja slużąca do tworzenia i zapisywania listy zakupów.
 + Wyświetlanie aktualnych list po dacie (domyślnie) i nazwie.
 + Zapisywanie listy do pliku pod zadaną ścieżke.
 ## Użyte programy
-Nasza aplikacja została utworzona przy pomocy programu [Python 3.9](https://www.python.org/downloads/release/python-390/). Głównym modułem z jakiego korzystaliśmy jest moduł [Tkinter](https://docs.python.org/3/library/tkinter.html).
+Nasza aplikacja została utworzona przy pomocy programu [Python 3.9](https://www.python.org/downloads/release/python-390/).
 ## Instalacja
-Naszą aplikacje można uruchomić na każdym komputerze; należy jedynie posiadać wersję 3.9 lub nowszą Pythona. W celu jej uruchomienia należy pobrać repozytorium,         a następnie w konsoli wpisać komende `$ <nazwa>.py`.
+Naszą aplikacje można uruchomić na każdym komputerze; należy jedynie posiadać wersję 3.9 lub nowszą Pythona...
 ## Zespół
-[Zdjęcie1] | [Zdjęcie2] | [Zdjęcie3] | [Zdjęcie4] | [Zdjęcie5] 
----|---|---|---|--- 
-[Paweł Lato] | [Adam Łęk] | [Paweł Majerczyk] | [Sebastian Ligas] | [Patrycja Lewicka] 
+<table>
+<tr>
+    <td align="center">
+        <a href="https://github.com/Laserjet332">
+            <img src="https://avatars.githubusercontent.com/u/129281223?v=4" width="100;"/>
+            <br />
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/Ligas10105">
+            <img src="https://avatars.githubusercontent.com/u/76687133?v=4" width="100;"/>
+            <br />
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/Adam-Lek">
+            <img src="https://avatars.githubusercontent.com/u/129278265?v=4" width="100;"/>
+            <br />
+        </a>
+    </td>  
+    <td align="center">
+        <a href="https://github.com/PMajerczyk">
+            <img src="https://avatars.githubusercontent.com/u/76687128?v=4" width="100;"/>
+            <br />
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/Patrycj2a">
+            <img src="https://avatars.githubusercontent.com/u/107553775?v=4" width="100;"/>
+            <br />
+        </a>
+    </td>
+</tr>
+
+<tr>
+    <td align = "center">
+        <a href = "https://github.com/Laserjet332">
+        Paweł Lato
+    </td>
+    <td align = "center">
+        <a href = "https://github.com/Ligas10105">
+        Sebastian Ligas
+    </td>
+    <td align = "center">
+        <a href = "https://github.com/Adam-Lek">
+        Adam Łęk
+    </td>
+    <td align = "center">
+        <a href = "https://github.com/PMajerczyk">
+        Paweł Majerczyk
+    </td>
+    <td align = "center">
+        <a href = "https://github.com/Patrycj2a">
+        Patrycja Lewicka
+    </td>
+</tr>
+</table>
