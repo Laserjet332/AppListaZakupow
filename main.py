@@ -59,11 +59,14 @@ def search_list(notebook, list_entry):
 
 
 def main():
+
     window = tk.Tk()
-    window.geometry("750x500")
-    window.minsize(width=750, height=500)
-    window.maxsize(width=750, height=500)
+    logo = tk.PhotoImage(file='logo.png')
+    window.geometry("750x550")
+    window.minsize(width=750, height=550)
+    window.maxsize(width=750, height=550)
     window.title("AppListaZakupow")
+    window.iconphoto(True,logo)
 
     entry_frame = tk.Frame(window)
     entry_frame.pack()
