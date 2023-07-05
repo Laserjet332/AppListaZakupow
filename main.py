@@ -31,6 +31,10 @@ def add_elem(notebook, elem_entry):
         listbox = frame.winfo_children()[0]
         listbox.insert(tk.END, elem_name)
 
+        elem_name_var = tk.IntVar()
+        tk.Checkbutton(listbox, text = elem_name, variable = elem_name_var, anchor = "w").pack(side = "top", fill = "both")
+       
+
 
 def remove_elem(notebook):
     current_tab = notebook.select()
@@ -56,6 +60,7 @@ def search_list(notebook, list_entry):
             messagebox.showinfo("Search Result", "No matching list found.")
     else:
         messagebox.showinfo("Search Result", "No lists available.")
+
 
 
 def main():
@@ -98,6 +103,15 @@ def main():
     remove_elem_button.pack(side=tk.BOTTOM)
     add_elem_button.pack(side=tk.BOTTOM)
     elem_entry.pack(side=tk.BOTTOM)
+
+    
+   # CheckVar1 = tk.IntVar()
+   # C1 = tk.Checkbutton(window, text = "Music", variable = CheckVar1, onvalue = 1, offvalue = 0, height=5, width = 20)
+   # C1.pack()
+  #  elem_name = elem_entry.get()
+  #  elem_name_var = tk.IntVar()
+    
+  #  tk.Checkbutton(window, text = elem_name, variable = elem_name_var, anchor = "w").pack(side = "top", fill = "both")
 
     window.mainloop()
 
