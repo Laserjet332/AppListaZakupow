@@ -104,14 +104,6 @@ def main():
     add_elem_button.pack(side=tk.BOTTOM)
     elem_entry.pack(side=tk.BOTTOM)
 
-    
-   # CheckVar1 = tk.IntVar()
-   # C1 = tk.Checkbutton(window, text = "Music", variable = CheckVar1, onvalue = 1, offvalue = 0, height=5, width = 20)
-   # C1.pack()
-  #  elem_name = elem_entry.get()
-  #  elem_name_var = tk.IntVar()
-    
-  #  tk.Checkbutton(window, text = elem_name, variable = elem_name_var, anchor = "w").pack(side = "top", fill = "both")
 
     window.mainloop()
 
