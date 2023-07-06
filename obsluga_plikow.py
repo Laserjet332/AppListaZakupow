@@ -1,7 +1,7 @@
 import os
 from pathlib import Path, PurePath
 
-def zapis_pliku(nazwa: str, lista: list, sciezka = None):   #zwrot 0 - sukces, -1 - blad sciezki
+def zapis_do_pliku(nazwa: str, lista: list, sciezka = None):   #zwrot 0 - sukces, -1 - blad sciezki
     
    
     #dodawanie rozszerzenia, jesli go nie ma
@@ -9,6 +9,8 @@ def zapis_pliku(nazwa: str, lista: list, sciezka = None):   #zwrot 0 - sukces, -
         nazwa = nazwa + ".txt"
     if sciezka is None:     #sprawdzanie, czy sciezka jest podana
         sciezka = ""
+    if ':' in nazwa:      #sprawdzanie, czy ':' nie jest pierwsze
+        nazwa.replace(':',"_")
     else:
         sciezka = sciezka + "/"
         if '\\' in sciezka:     #zmiana \ na / aby nie dzialala funkcja Path
@@ -24,9 +26,9 @@ def zapis_pliku(nazwa: str, lista: list, sciezka = None):   #zwrot 0 - sukces, -
     return 0
 
 
-def odczyt_pliku(nazwa: str, sciezka = None) -> list:   #zwrot 0 - sukces, -1 - blad sciezki
+def odczyt_z_pliku(nazwa: str, sciezka = None) -> list:   #zwrot 0 - sukces, -1 - blad sciezki
     #dodawanie rozszerzenia, jesli go nie ma
-    if '.' not in nazwa:
+    if ".txt" not in nazwa:
         nazwa = nazwa + ".txt"
 
     if sciezka is not None:
@@ -46,6 +48,6 @@ def odczyt_pliku(nazwa: str, sciezka = None) -> list:   #zwrot 0 - sukces, -1 - 
 
 
 
-#path = "E:/AppLista"
-#zapis_pliku("wowow.txt",["pierwsze", "drugie"], path)
+path = "E:/AppLista"
+zapis_do_pliku(":0.0ads",["pierwsze", "drugie"], path)
 #print(odczyt_pliku("wowow", path))
