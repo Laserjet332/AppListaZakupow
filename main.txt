@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 
-import include.obsluga_plikow as fp
+import obsluga_plikow as fp
 
 def add_list(notebook, list_entry):
     if str(list_entry) == list_entry:
