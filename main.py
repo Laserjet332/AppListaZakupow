@@ -57,7 +57,11 @@ def remove_elem(notebook):
 
 
 def search_list(notebook, list_entry):
-    search_query = list_entry.get("1.0", tk.END).strip()
+    search_query = ""
+    if type(list_entry) is not str:
+        search_query = list_entry.get("1.0", tk.END).strip()
+    else:
+        search_query = list_entry
     if notebook.tabs():
         found = False
         for tab in notebook.tabs():
@@ -101,6 +105,7 @@ def load_list(notebook):
         name += el
     add_list(notebook,name)
     new_list = list[len(name)+2:]
+    search_list(notebook,name)
     for el in new_list:
         if el == '\n':
             add_elem(notebook,product)
