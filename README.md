@@ -13,7 +13,13 @@ Prosta aplikacja slużąca do tworzenia i zapisywania listy zakupów.
 + Zapisywanie listy do pliku pod zadaną ścieżke.
 + Program może przechowywać wiele list zakupów.
 ## Działanie aplikacji
-Nasza aplikacja została utworzona przy pomocy programu [Python 3.9](https://www.python.org/downloads/release/python-390/) oraz modułu [tkinter](https://docs.python.org/3/library/tkinter.html). Moduł tkinter zawiera wiele przydatnych funkcji, ułatwiających tworzenie aplikacji okienkowych. Nasze listy są dodawane w górnej częsci apkikacji. Są one tworzone jako osobne karty (notebook'i), pomiędzy którymi można się łatwo przełączać. Natomiast elementy naszej listy są dodawane na dole, przy użyciu listboxów i umieszczane we framie, który następnie jest przypisywany do wybranej przez nas karty (notebook'a). Przyciski 'Zapisz' oraz 'Załaduj' pozwalają na odpowiednio zapis oraz odczyt wybranych plików tekstowych. Ponadto aplikajca oferuje możliwość zaznaczania już zakupionych przedmiotów za pomocą checkboxów oraz opcję wyszukania z dostępnych list listę o konkretnej nazwie.
+Nasza aplikacja została utworzona przy pomocy programu [Python 3.9](https://www.python.org/downloads/release/python-390/) oraz modułu [tkinter](https://docs.python.org/3/library/tkinter.html). Moduł tkinter zawiera wiele przydatnych funkcji, ułatwiających tworzenie aplikacji okienkowych. Nasze listy są dodawane w górnej częsci apkikacji. Są one tworzone jako osobne karty (notebook'i), pomiędzy którymi można się łatwo przełączać. Natomiast elementy naszej listy są dodawane na dole, przy użyciu listboxów i umieszczane we framie, który następnie jest przypisywany do wybranej przez nas karty (notebook'a). Przyciski 'Zapisz' oraz 'Załaduj' pozwalają na odpowiednio zapis oraz odczyt wybranych plików tekstowych (uwaga odnośnie odczytu listy w następnym paragrafie). Ponadto aplikajca oferuje możliwość zaznaczania już zakupionych przedmiotów za pomocą checkboxów oraz opcję wyszukania z dostępnych list listę o konkretnej nazwie.
+## Odczyt listy
+Aby aplikacja prawidłowo odczytałą listę musi ona być zapisana jako plik z rozszerzeniem '.txt'. Składnia listy oraz jej elementów musi być następująca:
+> Nazwa_listy: <br />
+> produkt_1 <br />
+> produkt_2 <br />
+> itd. <br />
 ## Instalacja i uruchomienie
 Naszą aplikacje można uruchomić na każdym komputerze, należy jedynie posiadać wersję 3.9 lub nowszą Pythona oraz pobrać nasze repozytorium. Następnie należy włączyć plik main.py oraz za pomocą zewnętrznego programu (np. Pycharm) uruchomić ją.
 ## Zespół
