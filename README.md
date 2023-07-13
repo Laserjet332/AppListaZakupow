@@ -14,9 +14,8 @@ Prosta aplikacja slużąca do tworzenia i zapisywania listy zakupów.
 + Program może przechowywać wiele list zakupów.
 ## Użyte programy
 Nasza aplikacja została utworzona przy pomocy programu [Python 3.9](https://www.python.org/downloads/release/python-390/) oraz modułu [tkinter](https://docs.python.org/3/library/tkinter.html).
-## Instalacja
-Naszą aplikacje można uruchomić na każdym komputerze, należy jedynie posiadać wersję 3.9 lub nowszą Pythona oraz pobrać nasze repozytorium. Więcej informacji
-[tutaj](https://github.com/Laserjet332/AppListaZakupow/wiki).
+## Instalacja i uruchomienie
+Naszą aplikacje można uruchomić na każdym komputerze, należy jedynie posiadać wersję 3.9 lub nowszą Pythona oraz pobrać nasze repozytorium. Następnie należy włączyć plik main.py oraz za pomocą zewnętrznego programu (np. Pycharm) uruchomić ją.
 ## Zespół
 <table>
 <tr>
