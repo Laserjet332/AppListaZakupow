@@ -3,11 +3,17 @@ from tkinter import ttk
 from tkinter import messagebox
 
 
+import include.obsluga_plikow as fp
+
 def add_list(notebook, list_entry):
-    list_name = list_entry.get("1.0", tk.END).strip()
+    if str(list_entry) == list_entry:
+        list_name = str(list_entry)
+    else:
+        list_name = list_entry.get("1.0", tk.END).strip()
+        list_entry.delete("1.0", tk.END)
     if not list_name:
         list_name = "None"
-    list_entry.delete("1.0", tk.END)
+
     frame = ttk.Frame(notebook)
     notebook.add(frame, text=list_name)
     listbox = tk.Listbox(frame, width=75, height=20)
@@ -22,10 +28,13 @@ def remove_list(notebook):
 
 def add_elem(notebook, elem_entry):
     if notebook.tabs():
-        elem_name = elem_entry.get()
+        if  str(elem_entry) == elem_entry:
+            elem_name = str(elem_entry)
+        else:
+            elem_name = elem_entry.get()
+            elem_entry.delete(0, tk.END)
         if not elem_name:
-            elem_name = "None"
-        elem_entry.delete(0, tk.END)
+            elem_name = "None"        
         current_tab = notebook.select()
         frame = notebook.nametowidget(current_tab)
         listbox = frame.winfo_children()[0]
@@ -60,6 +69,42 @@ def search_list(notebook, list_entry):
             messagebox.showinfo("Search Result", "No matching list found.")
     else:
         messagebox.showinfo("Search Result", "No lists available.")
+
+def saving_lists_into(notebook, path):
+    if not path:
+        path = None
+    fp.zapis_do_pliku(
+        notebook.tab(notebook.select(), "text"), 
+        notebook.nametowidget(notebook.select()).winfo_children()[0].get(0, tk.END), 
+        path
+    )
+
+def read_list_from(notebook, path_name) -> None:
+    if "\\" not in path_name and "/" not in path_name:
+        new_list = fp.odczyt_z_pliku(path_name)
+    else:
+        if ".txt" not in path_name:
+            path_name = path_name + ".txt"
+        if '\\' in path_name:     #zmiana \ na / aby nie dzialala funkcja Path
+            for x in path_name:
+                if x == '\\':
+                    x = '/'
+
+        name_of_file = ""
+        for x in list(reversed(range(0, len(path_name)))):
+            if path_name[x] == '\\':
+                name_of_file = path_name[x+1:]
+                path_name = path_name[:x]
+                break
+        new_list = fp.odczyt_z_pliku(name_of_file, path_name)
+    if ".txt" in name_of_file:      #usuniecie .txt z nazwy listy
+        name_of_file = name_of_file[:-4]
+    add_list(notebook, name_of_file)
+    notebook.select(notebook.tabs()[-1])    #ustawienie zapisu elementow na nowa ostania liste
+    for x in new_list:      #dodawanie elementow do listy
+        if "\n" in x:       #usuniecie '\n' z elementow listy
+            x = x[:-1]
+        add_elem(notebook, x)
 
 
 
@@ -104,10 +149,17 @@ def main():
     add_elem_button.pack(side=tk.BOTTOM)
     elem_entry.pack(side=tk.BOTTOM)
 
+    save_list_as_txt = tk.Button(window, text="Zapisz liste", command=lambda: saving_lists_into(notebook, elem_entry.get()))
+    read_list_from_txt = tk.Button(window, text="Odczytaj liste", command=lambda: read_list_from(notebook, elem_entry.get()))
+    read_list_from_txt.pack(side = tk.RIGHT)
+
+    save_list_as_txt.pack(side = tk.LEFT)
+
 
     window.mainloop()
 
 
 if __name__ == "__main__":
     main()
+
 
