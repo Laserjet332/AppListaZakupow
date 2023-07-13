@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 
+
 import include.obsluga_plikow as fp
 
 def add_list(notebook, list_entry):
@@ -12,6 +13,7 @@ def add_list(notebook, list_entry):
         list_entry.delete("1.0", tk.END)
     if not list_name:
         list_name = "None"
+
     frame = ttk.Frame(notebook)
     notebook.add(frame, text=list_name)
     listbox = tk.Listbox(frame, width=75, height=20)
@@ -105,6 +107,7 @@ def read_list_from(notebook, path_name) -> None:
         add_elem(notebook, x)
 
 
+
 def main():
 
     window = tk.Tk()
@@ -152,8 +155,11 @@ def main():
 
     save_list_as_txt.pack(side = tk.LEFT)
 
+
     window.mainloop()
 
 
 if __name__ == "__main__":
     main()
+
+
